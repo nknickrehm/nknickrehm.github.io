@@ -1,0 +1,41 @@
+$fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/v4-shims';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: transparent;
+}
+
+@media (min-width: 640px) {
+  .bubble:after {
+    border-width: 24px 24px 0 0;
+    top: 27%;
+    right: -24px;
+    margin-top: -12px;
+    border-color: transparent;
+    background: transparent;
+  }
+}
+
+@media (max-width: 639px) {
+  .bubble:after {
+    border-width: 0 0 24px 24px;
+    top: -24px;
+    left: 27%;
+    margin-left: -12px;
+  }
+}
+
+
